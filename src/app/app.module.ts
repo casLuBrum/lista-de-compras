@@ -5,6 +5,8 @@ import { MyApp } from './app.component';
 
 import { SQLite } from '@ionic-native/sqlite';
 import { DatabaseService } from '../providers/shared/database.service';
+import { ToastService } from '../providers/shared/toast.service';
+
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -40,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SQLite,
-    DatabaseService
+    DatabaseService,
+    ToastService
   ]
 })
 export class AppModule {}
