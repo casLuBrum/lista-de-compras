@@ -6,11 +6,12 @@ import { MyApp } from './app.component';
 import { SQLite } from '@ionic-native/sqlite';
 import { DatabaseService } from '../providers/shared/database.service';
 import { ToastService } from '../providers/shared/toast.service';
-
+import { CategoriaService } from '../providers/categorias/categoria.service';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { ListCategoriaPage } from '../pages/categorias/list/list.categoria';
+import { EditCategoriaPage } from '../pages/categorias/edit/edit.categoria';
 import { ListListaPage } from '../pages/listas/list/list.lista';
 import { SobrePage } from '../pages/sobre/sobre';
 
@@ -22,6 +23,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     TabsPage,
     ListCategoriaPage,
+    EditCategoriaPage,
     ListListaPage,
     SobrePage
   ],
@@ -34,6 +36,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     TabsPage,
     ListCategoriaPage,
+    EditCategoriaPage,
     ListListaPage,
     SobrePage
   ],
@@ -43,7 +46,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SQLite,
     DatabaseService,
-    ToastService
+    ToastService,
+    CategoriaService
   ]
 })
 export class AppModule {}
